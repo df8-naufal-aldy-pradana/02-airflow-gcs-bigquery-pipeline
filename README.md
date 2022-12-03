@@ -1,11 +1,22 @@
-### Concepts
-
- [Airflow Concepts and Architecture](docs/1_concepts.md)
+# 02-airflow-gcs-bigquery-pipeline
+This is an data pipeline that are create by airflow's DAGS which ingest data from this endpoint https://datausa.io/api/data?drilldowns=Nation&measures=Population, save the response as json file, convert the json into csv, upload it into gcs and finally load into data warehouse external table.
+flow of the DAG also shown below:
 
 ### Workflow
 
  ![](docs/gcs_ingestion_dag.png)
+
+### End Result
+The end result of this pipeline is data creating external table from the ingested table which can read through metadata of the parquet file and can be queried as well.  Below are screenshot of the result:
+
+ ![](docs/bigquery_result.png)
  
+
+### Concepts
+
+ [Airflow Concepts and Architecture](docs/1_concepts.md)
+
+
 ### Setup - Official Version
  (For the section on the Custom/Lightweight setup, scroll down)
 
@@ -119,5 +130,3 @@ For more info, check out these official docs:
    * https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html
    * https://airflow.apache.org/docs/docker-stack/build.html
    * https://airflow.apache.org/docs/docker-stack/recipes.html
-
-# 02-airflow-gcs-bigquery-pipeline
