@@ -7,7 +7,7 @@ flow of the DAG also shown below:
  ![](docs/gcs_ingestion_dag.png)
 
 ### End Result
-The end result of this pipeline is data creating external table from the ingested table which can read through metadata of the parquet file and can be queried as well.  Below are screenshot of the result:
+The end result of this pipeline is creating external table from the ingested data which can read through metadata of the parquet file and can be queried as well.  Below are screenshot of the result:
 
  ![](docs/bigquery_result.png)
  
